@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>婚禮出席統計＆點餐</title>
-<meta name="description" content="2027/1/23（六）晚上在大院子，一起吃飯敘舊！報名到 12/13（日）23:59 截止。">
+<meta name="description" content="林子淵 ✕ 廖盈淇｜2027/1/23（六）晚上在大院子，一起吃飯敘舊！報名到 12/13（日）23:59 截止。">
 <meta property="og:title" content="婚禮出席統計＆點餐">
-<meta property="og:description" content="2027/1/23（六）晚上在大院子，一起吃飯敘舊！報名到 12/13（日）23:59 截止。">
+<meta property="og:description" content="林子淵 ✕ 廖盈淇｜2027/1/23（六）晚上在大院子，一起吃飯敘舊！報名到 12/13（日）23:59 截止。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
@@ -30,6 +30,10 @@ main{position:relative;z-index:1;max-width:580px;margin:0 auto;padding:18px 16px
 .couple{display:block;width:min(400px,92%);margin:4px auto 0;animation:walk 3.2s ease-in-out infinite}
 @keyframes walk{50%{transform:translateY(-5px) rotate(-.6deg)}}
 @media (prefers-reduced-motion:reduce){.couple{animation:none}html{scroll-behavior:auto}}
+.names{display:flex;justify-content:center;align-items:center;gap:14px;margin:6px 0 0;font-size:22px;font-weight:700;letter-spacing:2px}
+.names span{display:flex;align-items:baseline;gap:6px}
+.names small{font-size:14px;font-weight:400;color:var(--soft);letter-spacing:0;background:var(--mus2);border-radius:6px;padding:0 6px}
+.names b{color:var(--coral);font-size:18px}
 .steps{display:flex;justify-content:center;gap:10px;margin:14px 0 6px}
 .steps i{width:12px;height:12px;border:2px solid var(--ink);border-radius:50%;background:var(--paper)}
 .steps i.on{background:var(--mus)}
@@ -135,9 +139,10 @@ footer{text-align:center;color:var(--soft);font-size:14px;margin-top:20px}
         <path d="M516 136 L496 116 L522 112 Z" fill="#E9E4DE"/>
         <path d="M70 52 Q300 -2 530 52 L530 118 Q300 64 70 118 Z"/>
       </g>
-      <path id="mid" d="M80 92 Q300 34 520 92" fill="none"/>
+      <path id="mid" d="M70 101 Q300 47 530 101" fill="none"/>
       <text font-size="42" letter-spacing="2"><textPath href="#mid" startOffset="50%" text-anchor="middle">婚禮出席統計＆點餐</textPath></text>
     </svg>
+    <p class="names"><span><small>新郎</small>林子淵</span><b aria-label="與">✕</b><span><small>新娘</small>廖盈淇</span></p>
     <div class="steps" id="steps" aria-hidden="true"></div>
   </header>
 
@@ -277,7 +282,7 @@ footer{text-align:center;color:var(--soft);font-size:14px;margin-top:20px}
 {
 /* ======== 設定：部署好 Apps Script 後，把網址貼在這裡 ======== */
 const CONFIG = {
-  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzfbdrfqJEKumzrMKt6bF4efR2nbHkRotL-jfeaTI_66F-LpgzwAbwHFOMxgfgM36D1/exec',                              // 例：'https://script.google.com/macros/s/xxxx/exec'
+  SCRIPT_URL: '',                              // 例：'https://script.google.com/macros/s/xxxx/exec'
   DEADLINE: '2026-12-13T23:59:59+08:00'        // 報名截止時間（台北時間）
 };
 /* ============================================================== */
