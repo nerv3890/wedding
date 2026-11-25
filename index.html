@@ -476,10 +476,10 @@ form.addEventListener('submit', async e => {
     } else { await new Promise(r => setTimeout(r, 600)); }
     if (!res.ok) throw new Error(res.error || '送出失敗');
     const d = store.get() || {}; d.sent = {name:data.name, at:Date.now()}; d.draft = st; store.set(d);
-    $('#doneT').textContent = data.attend === '會' ? '收到啦！1/23 見～' : '收到啦！下次再約～';
+    $('#doneT').textContent = data.attend === '會' ? '收到啦！2027/1/23（六）晚上見～' : '88888888';
     $('#doneP').textContent = data.attend === '會'
       ? `${data.name}，你的報名和點餐都記下來了${res.updated ? '（已更新成最新版本）' : ''}。之後的通知會寄到 ${data.email}，記得做好喝酒的準備！`
-      : `${data.name}，謝謝你回覆！我們會想你的。`;
+      : `${data.name}，謝謝你回覆！`;
     go('pDone');
   } catch (err) {
     $('#sendErr').textContent = '送出好像失敗了（' + (err.message || '網路問題') + '），請稍後再按一次，或直接私訊新郎新娘。';
