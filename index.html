@@ -284,7 +284,8 @@ footer{text-align:center;color:var(--soft);font-size:14px;margin-top:20px}
 const CONFIG = {
   SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzfbdrfqJEKumzrMKt6bF4efR2nbHkRotL-jfeaTI_66F-LpgzwAbwHFOMxgfgM36D1/exec',                              // 例：'https://script.google.com/macros/s/xxxx/exec'
   DEADLINE: '2026-12-13T23:59:59+08:00',        // 報名截止時間（台北時間）
-  YES_GIF: 'cat.gif'  // 會出席的感謝頁圖片
+  YES_GIF: 'cat.gif',  // 會出席的感謝頁圖片
+  NO_GIF: 'next-time.png'
 };
 /* ============================================================== */
 
@@ -479,7 +480,7 @@ form.addEventListener('submit', async e => {
     const d = store.get() || {}; d.sent = {name:data.name, at:Date.now()}; d.draft = st; store.set(d);
     const di = $('#pDone img');
     if (!di.dataset.couple) di.dataset.couple = di.src;
-    di.src = data.attend === '會' ? CONFIG.YES_GIF : di.dataset.couple;
+    di.src = data.attend === '會' ? CONFIG.YES_GIF : CONFIG.NO_GIF;
     $('#doneT').textContent = data.attend === '會' ? '收到啦！2027/1/23（六）晚上見～' : '88888888';
     $('#doneP').textContent = data.attend === '會'
       ? `${data.name}，你的報名和點餐都記下來了${res.updated ? '（已更新成最新版本）' : ''}。之後的通知會寄到 ${data.email}，記得做好喝酒的準備，喝酒不開車、開車不喝酒！`
